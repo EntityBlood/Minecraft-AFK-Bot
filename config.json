@@ -1,6 +1,6 @@
 {
-  "serverHost": "example.aternos.me",
-  "serverPort": 12345,
-  "botUsername": "IceLaterBot",
+  "PikachuMC3762-Xgmv.aternos.me": "example.aternos.me",
+  "13833": 12345,
+  "AfkBot24/7": "IceLaterBot",
   "botChunk": 1
 }
