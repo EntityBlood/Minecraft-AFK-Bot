@@ -1,6 +1,6 @@
 {
-  "serverHost": "example.aternos.me",
-  "serverPort": 12345,
-  "botUsername": "IceLaterBot",
+  "serverHost": "oursmp.gg.play.hosting",
+  "serverPort": 63744,
+  "botUsername": "MSTs_Bot",
   "botChunk": 1
 }
