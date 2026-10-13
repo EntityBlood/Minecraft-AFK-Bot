@@ -1,6 +1,8 @@
 {
-  "serverHost": "example.aternos.me",
-  "serverPort": 12345,
-  "botUsername": "IceLaterBot",
+  "serverHost": "FriendshipPixel.aternos.me",
+  "serverPort": 17320,
+  "botUsername": "SenpaiSpider",
   "botChunk": 1
 }
+-/register ayanayan1234 ayanayan1234
+-/login ayanayan1234 ayanayan1234
